@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Trade Service LLP </title>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        :root {
+
+            --secondary-teal: #00CCCC;
+
+            --primary-blue: #0066CC;
+            --primary-dark: #003366;
+
+            --neutral-white: #FFFFFF;
+
+
+            --font-body: 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            --spacing-xs: ;
+            --spacing-sm: 12px;
+            --spacing-md: 8px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --spacing-2xl: 48px;
+
+
+            --radius-md: 16px;
+            --radius-xl: 16px;
+            --radius-circle: 50%;
+
+            --transition-fast: 0.2s ease; 
+
+        }
+        :root {
+            /* Primary Colors */
+            --primary-blue: #0066CC;
+            --primary-dark: #003366;
+            --primary-light: #3399FF;
+            --secondary-teal: #00CCCC;
+            --accent-orange: #FF9900;
+
+            /* Neutral Colors */
+            --neutral-white: #FFFFFF;
+            --neutral-light: #F5F8FA;
+            --neutral-gray: #6C757D;
+            --neutral-dark: #343A40;
+
+            /* Utility Colors */
+            --success-green: #28A745;
+            --warning-yellow: #FFC107;
+            --danger-red: #DC3545;
+
+            /* Typography */
+            --font-heading: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            --font-body: 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+
+            /* Spacing */
+            --spacing-xs: 8px;
+            --spacing-sm: 12px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --spacing-2xl: 48px;
+            --spacing-3xl: 64px;
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-circle: 50%;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-slow: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--neutral-dark);
+            background-color: var(--neutral-light);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition-fast);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-sm) var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            transition: all var(--transition-normal);
+            gap: var(--spacing-sm);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-teal));
+            color: var(--neutral-white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+            color: var(--neutral-white);
+        }  
+
+      /* GLOBAL STYLES - Day 0
+           Created by: Sanya (Project Leader)
+           Git Command: git commit -m "Initial project structure with homepage layout" */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #0066cc;
+        text-align: center;
+        margin: 2rem 0;
+        padding: 1rem;
+        border-bottom: 2px solid #0066cc;
+      }
+
+      /* HERO SECTION - Day 1 (Tom)
+           Git Command: git commit -m "Update hero section description" */
+      .hero-section {
+        background: linear-gradient(135deg, #0066cc, #0099cc);
+        color: white;
+        padding: 4rem 2rem;
+        border-radius: 10px;
+        margin: 2rem 0;
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        opacity: 0.9;
+      }
+
+      .day-marker {
+        background: #0066cc;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+
+      /* NAVIGATION - Day 1 (Alex)
+           Git Command: git commit -m "Refine navbar labels" */
+      .navbar {
+        background: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #0066cc;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-link {
+        color: #333;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+
+      .nav-link:hover {
+        background: #0066cc;
+        color: white;
+      }
+
+      /* TECH STACK - Day 3 (Alex) */
+      .tech-stack {
+        background: white;
+        padding: 3rem 2rem;
+        margin: 2rem 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .stack-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .stack-item {
+        background: #f8f9fa;
+        padding: 1.5rem 1rem;
+        border-radius: 8px;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 1px solid #dee2e6;
+      }
+
+      .stack-item:hover {
+        background: #0066cc;
+        color: white;
+        transform: translateY(-5px);
+      }
+
+      .stack-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .stack-name {
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+
+      /* FOOTER - Day 1 (Sanya)
+           Git Command: git commit -m "Update footer text" */
+      .footer {
+        background: #333;
+        color: white;
+        padding: 2rem;
+        margin-top: 4rem;
+        border-radius: 8px;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+
+      .footer-section h3 {
+        color: #0099cc;
+        margin-bottom: 1rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: white;
+      }
+
+      .copyright {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #555;
+        color: #999;
+        font-size: 0.9rem;
+      }
+        /* HERO SLIDER - Day 2 (Sanya - Feature Branch)
+           Git Command: git commit -m "Refine hero slider content and layout structure" */
+      .hero-slider {
+        background: linear-gradient(135deg, #0066cc, #0099cc);
+        color: white;
+        padding: 3rem 2rem;
+        margin: 2rem 0;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .slider-content {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .slider-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .slider-subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .slider-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+      }
+
+      .slider-indicator {
+        width: 12px;
+        height: 12px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .slider-indicator.active {
+        background: white;
+      }
+
+      /* LAYOUT STRUCTURE IMPROVEMENTS - Day 2 (Sanya) */
+      .layout-demo {
+        background: white;
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .layout-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .layout-item {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid #dee2e6;
+      }
+
+      .layout-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #0066cc;
+      }
+
+      .git-commands {
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-family: monospace;
+      }
+
+      .pr-management {
+        background: #e7f3ff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+      }
+
+      /* WHY-US SECTION - Day 2 (Tom - Feature Branch)
+           Git Command: git commit -m "Improve hero layout and why-us cards" */
+      .whyus-section {
+        background: white;
+        padding: 3rem 2rem;
+        margin: 2rem 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-title {
+        text-align: center;
+        color: #0066cc;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .feature-card {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 8px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #dee2e6;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        color: #0066cc;
+        margin-bottom: 1rem;
+      }
+
+      .feature-title {
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      /* LEARNING PATH - Day 3 (Tom) */
+      .learning-path {
+        background: white;
+        padding: 3rem 2rem;
+        margin: 2rem 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      .path-steps::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 30px;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(to bottom, #0066cc, #0099cc);
+      }
+
+      .path-step {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #0066cc, #0099cc);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .step-content {
+        padding-top: 0.5rem;
+      }
+
+      .step-title {
+        color: #0066cc;
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+      }
+
+      /* TESTIMONIALS - Day 3 (Tom) */
+      .testimonials {
+        background: #f8f9fa;
+        padding: 3rem 2rem;
+        margin: 2rem 0;
+        border-radius: 10px;
+        border: 1px solid #dee2e6;
+      }
+
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .testimonial-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 1.5rem;
+        color: #555;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .author-avatar {
+        width: 50px;
+        height: 50px;
+        background: #0066cc;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+      }
+
+      /* ============================================
+           CONTACT FORM SECTION STYLES
+           Day: 4 (Contact section + Form + Tailwind tweaks)
+           Person: Tom (Developer)
+           Task: Create feature/contact-form branch for contact section
+           Git Commands Used:
+             git switch main
+             git pull
+             git switch -c feature/contact-form
+             git add index.html
+             git commit -m "Style contact form and contact info"
+             git push -u origin feature/contact-form
+           ============================================ */
+        .contact {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue));
+            color: var(--neutral-white);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-2xl);
+            margin-top: var(--spacing-xl);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xl);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-circle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: var(--spacing-md);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--neutral-white);
+            font-family: var(--font-body);
+            font-size: 16px;
+            transition: all var(--transition-fast);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary-teal);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .section-title {
+            font-size: 40px;
+            text-align: center;
+            color: var(--primary-dark);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            text-align: center;
+            color: var(--neutral-gray);
+            max-width: 600px;
+            margin: 0 auto var(--spacing-2xl);
+        }
+
+        /* LEARNING PATH - Day 3 (Tom) */
+      .learning-path {
+        background: white;
+        padding: 3rem 2rem;
+        margin: 2rem 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .path-steps {
+        max-width: 800px;
+        margin: 2rem auto 0;
+        position: relative;
+      }
+
+      .path-steps::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 30px;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(to bottom, #0066cc, #0099cc);
+      }
+
+      .path-step {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #0066cc, #0099cc);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .step-content {
+        padding-top: 0.5rem;
+      }
+
+      .step-title {
+        color: #0066cc;
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+      }
+
+
+
+
+      /* COURSES SECTION - Day 2 (Alex - Feature Branch)
+           Git Command: git commit -m "Enhance header navbar and courses cards" */
+      .courses-section {
+        background: white;
+        padding: 3rem 2rem;
+        margin: 2rem 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .courses-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .course-card {
+        background: #f8f9fa;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #dee2e6;
+        transition: transform 0.3s ease;
+      }
+
+      .course-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .course-image {
+        height: 160px;
+        background: linear-gradient(135deg, #0066cc, #0099cc);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2.5rem;
+      }
+
+      .course-content {
+        padding: 1.5rem;
+      }
+
+      .course-category {
+        display: inline-block;
+        background: #0066cc;
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .course-title {
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .course-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      /* IMPROVED NAVBAR - Day 2 (Alex) */
+      .navbar {
+        background: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #0066cc;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .nav-link {
+        color: #333;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .nav-link:hover {
+        background: #0066cc;
+        color: white;
+      }
+
+      .git-commands {
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <!-- <header>
+    <div class="logo">
+        <img src="apg.png" alt="Trade Service LLP Logo" style="text-align: center;">
+    </div>
+  </header> -->
+
+  <body>
+    <!-- HEADER SECTION - Day 0
+  <body>
+    <!-- HEADER SECTION - Day 0
+         Created by: Sanya (Project Leader)
+         Git Command: git add . && git commit -m "Initial project structure" -->
+    <!-- <div class="day-marker">Day 0: Initial Setup</div> -->
+    
+    <!-- NAVIGATION - Day 1 (Alex)
+         Git Command: git commit -m "Refine navbar labels" -->
+    <nav class="navbar">
+      <div class="logo">🎓 Trade Smartly </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <!-- <li><a href="#" class="nav-link">Tech Stack</a></li> -->
+        <!-- <li><a href="#" class="nav-link">Testimonials</a></li> -->
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    
+
+
+ <h1> APG TRADE SERVICES LLP </h1>
+
+    <!-- HERO SLIDER - Day 2 (Sanya - Feature Branch)
+         Git Command: git commit -m "Refine hero slider content and layout structure" -->
+    <section class="hero-slider">
+      <div class="slider-content">
+        <h2 class="slider-title">Welcome to APG Trade Service LLP</h2>
+        <p class="slider-subtitle">
+          We are a professional export documentation service provider based in Mumbai.
+          we assist exporters,freight forwarders and logistics companies with fast and reliable documentation for international trade.
+        </p>
+        <div
+          style="
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <!-- <button
+            style="
+              background: white;
+              color: #0066cc;
+              border: none;
+              padding: 1rem 2rem;
+              border-radius: 5px;
+              font-weight: bold;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+            "
+          >
+            <span>🚀</span> Start Day 1 
+          </button> -->
+          <!-- <button
+            style="
+              background: transparent;
+              color: white;
+              border: 2px solid white;
+              padding: 1rem 2rem;
+              border-radius: 5px;
+              font-weight: bold;
+              cursor: pointer;
+            "
+          >
+            View Curriculum
+          </button> -->
+        </div>
+
+        <div class="slider-indicators">
+          <div class="slider-indicator active"></div>
+          <div class="slider-indicator"></div>
+          <div class="slider-indicator"></div>
+          <div class="slider-indicator"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- COURSES SECTION - Day 2 (Alex - Feature Branch)
+         Git Command: git commit -m "Enhance header navbar and courses cards" -->
+    <section class="courses-section">
+      <h2 style="text-align: center; color: #0066cc; margin-bottom: 1rem">
+        Our Trade Services 
+      </h2>
+      <p style="text-align: center; color: #666; margin-bottom: 2rem">
+        Trade Smarter, Not Harder.
+      </p>
+
+      <div class="courses-grid">
+        <div class="course-card">
+          <!-- <div class="course-image">📚</div> -->
+          <div class="course-content">
+            <!-- <span class="course-category">Beginner</span> -->
+            <h3 class="course-title"> Export Documentation </h3>
+            <p><li>
+              ICE Documentation Support 
+            </li>
+            <li> Certificate of Origin (Perferential and Non-preferentail)</li>
+            <li> RCMC Registration </li>
+            <li> AD Code Registration </li>
+              <!-- Learn basic Git commands, commit workflow, and simple
+              collaboration on main branch. -->
+            </p>
+            <!-- <div class="course-meta">
+              <span>⏱️ 4 hours</span>
+              <span>⭐ 4.8/5</span>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="course-card">
+          <!-- <div class="course-image">🌿</div> -->
+          <div class="course-content">
+            <!-- <span class="course-category">Intermediate</span> -->
+            <h3 class="course-title">Government Certificates </h3>
+            <p>
+              <li> phytosanitary Certificate
+              </li>
+              <li> Health Certificate from EIA </li>
+              <li> PQ Certificate </li>
+              <li> Fumigation Certificate </li>
+              <!-- Master feature branches, pull requests, merge conflicts, and team
+              collaboration. -->
+            </p>
+            <!-- <div class="course-meta">
+              <span>⏱️ 6 hours</span>
+              <span>⭐ 4.9/5</span>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="course-card">
+          <!-- <div class="course-image">🚀</div> -->
+          <div class="course-content">
+            <!-- <span class="course-category">Advanced</span> -->
+            <h3 class="course-title"> Trade and Compliance Services </h3>
+            <p>
+              <li> RoDTEP Benefits Assistance </li>
+              <li> DGFT Related Services </li>
+              <li> Digital Signature Certificate (DSC)</li>
+              <li> Embassy Legalization/ Attestation </li>
+              <!-- Dive into rebase, stash, cherry-pick, and production deployment
+              strategies. -->
+            </p>
+            <!-- <div class="course-meta">
+              <span>⏱️ 5 hours</span>
+              <span>⭐ 5.0/5</span>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+   
+    <!-- WHY US SECTION - Day 2 (Tom - Feature Branch)
+         Git Command: git commit -m "Improve hero layout and why-us cards" -->
+    <section class="whyus-section">
+      <h2 class="section-title">Why Choose Us ?</h2>
+      <p style="text-align: center; margin-bottom: 2rem; color: #666">
+        Here's what makes our trade different and effective for you
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <!-- <div class="feature-icon">📚</div> -->
+          <h3 class="feature-title"> Fast documentation processing </h3>
+          <!-- <p>
+            7-day progressive curriculum from basics to advanced Git workflows.
+          </p> -->
+        </div>
+
+        <div class="feature-card">
+          <!-- <div class="feature-icon">👥</div> -->
+          <h3 class="feature-title">Complete export documentation under one roof </h3>
+          <!-- <p>
+            Work with simulated team members (Sanya, Alex, Tom) like real
+            projects.
+          </p> -->
+        </div>
+
+        <div class="feature-card">
+          <!-- <div class="feature-icon">💻</div> -->
+          <h3 class="feature-title">Experienced in handling government  Certificate</h3>
+          <!-- <p>Build actual websites while learning Git commands at each step.</p> -->
+        </div>
+
+        <div class="feature-card">
+          <!-- <div class="feature-icon">🎯</div> -->
+          <h3 class="feature-title">Reliable support for exporters and freight forwarders </h3>
+          <!-- <p>
+            Learn industry-standard workflows used by professional development
+            teams.
+          </p> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- LAYOUT STRUCTURE IMPROVEMENTS - Day 2 (Sanya)
+    <section class="layout-demo">
+      <h2 style="text-align: center; color: #0066cc; margin-bottom: 1rem">
+        Website Structure Improvements
+      </h2>
+      <p style="text-align: center; color: #666; margin-bottom: 2rem">
+        As Project Leader, I'm improving the overall layout structure for better
+        maintainability
+      </p>
+
+      <div class="layout-grid">
+        <div class="layout-item">
+          <div class="layout-icon">🏗️</div>
+          <h3>Modular Structure</h3>
+          <p>Each section is independent and reusable</p>
+        </div>
+
+        <div class="layout-item">
+          <div class="layout-icon">📱</div>
+          <h3>Responsive Design</h3>
+          <p>Works on mobile, tablet, and desktop</p>
+        </div>
+
+        <div class="layout-item">
+          <div class="layout-icon">🎨</div>
+          <h3>Consistent Styling</h3>
+          <p>Uniform spacing, colors, and typography</p>
+        </div>
+
+        <div class="layout-item">
+          <div class="layout-icon">⚡</div>
+          <h3>Performance</h3>
+          <p>Optimized for fast loading and smooth interactions</p>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- TECH STACK SECTION - Day 3 (Alex) -->
+    <!-- <section class="tech-stack">
+      <h2 style="text-align: center; color: #0066cc; margin-bottom: 1rem">
+        Technologies You'll Master
+      </h2>
+      <p style="text-align: center; color: #666; margin-bottom: 2rem">
+        Along with Git, gain experience with these essential web technologies
+      </p>
+
+      <div class="stack-grid">
+        <div class="stack-item">
+          <div class="stack-icon">🌐</div>
+          <div class="stack-name">HTML5</div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-icon">🎨</div>
+          <div class="stack-name">CSS3</div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-icon">⚡</div>
+          <div class="stack-name">JavaScript</div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-icon">📊</div>
+          <div class="stack-name">Git</div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-icon">🚀</div>
+          <div class="stack-name">GitHub</div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-icon">💻</div>
+          <div class="stack-name">VS Code</div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- LEARNING PATH SECTION - Day 3 (Tom) -->
+    <!-- <section class="learning-path">
+      <h2 style="text-align: center; color: #0066cc; margin-bottom: 1rem">
+        7-Day Git Learning Journey
+      </h2>
+      <p style="text-align: center; color: #666; margin-bottom: 2rem">
+        Follow this structured path from Git novice to version control expert
+      </p>
+
+      <div class="path-steps">
+        <div class="path-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3 class="step-title">Days 0-1: Foundation</h3>
+            <p>
+              Git setup, basic commands (init, add, commit, push), simple
+              workflow on main branch.
+            </p>
+          </div>
+        </div>
+
+        <div class="path-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3 class="step-title">Days 2-3: Branching</h3>
+            <p>
+              Feature branches, pull requests, merge conflicts, team
+              collaboration strategies.
+            </p>
+          </div>
+        </div>
+
+        <div class="path-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3 class="step-title">Days 4-7: Advanced</h3>
+            <p>
+              Rebasing, stashing, cherry-picking, team simulations, and
+              production workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- TESTIMONIALS SECTION - Day 3 (Tom) -->
+    <!-- <section class="testimonials">
+      <h2 style="text-align: center; color: #0066cc; margin-bottom: 1rem">
+        Student Testimonials
+      </h2>
+      <p style="text-align: center; color: #666; margin-bottom: 2rem">
+        Hear from developers who transformed their workflow
+      </p>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "The hands-on approach with real team simulation made all the
+            difference. I went from Git novice to confidently managing team
+            repositories in one week!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JS</div>
+            <div>
+              <h4>Jamie Smith</h4>
+              <p style="color: #666; font-size: 0.9rem">Frontend Developer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Learning Git through building this actual website was brilliant.
+            Each day's tasks corresponded to real Git commands."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <h4>Maria Rodriguez</h4>
+              <p style="color: #666; font-size: 0.9rem">Full Stack Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ============================================
+         CONTACT FORM SECTION
+         Day: 4 (Contact section + Form + Tailwind tweaks)
+         Person: Tom (Developer)
+         Branch: feature/contact-form
+         Git Command Reference: See CSS comments above
+    ============================================ -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Start Your Trading Journey with US..! </h2>
+            <!-- <p class="section-subtitle fade-in-delay-1">
+                Ready to master version control? Contact us to join the next bootcamp batch
+            </p> -->
+            
+            <div class="contact-container">
+                <div class="contact-info fade-in-delay-1">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Our Location</h4>
+                            <p>Yogeshwar Building No: 135/139,
+                              Office No: 107,Cabin No: 2, 1st floor,
+                              Kazi Sayed Street, Masjid (W)
+                              Mumbai 400003.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>+91 8268137701 </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>apgtradeservices@gamil.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in-delay-2">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" class="form-control" placeholder="Tell us about your goals..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+
+    <!-- FOOTER - Day 1 (Sanya)
+         Git Command: git commit -m "Update footer text" -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <!-- <h3>IT Education</h3> -->
+          <!-- <p>Learn Git through hands-on, project-based training.</p> -->
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <!-- <li><a href="#">Git Resources</a></li> -->
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>Email: apgtradeservices@gmail.com </p>
+          <p>Phone: 8268137701 </p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p> Copyrights &copy; Apg trade Services all rights reserved.</p>
+        <!-- <p>This project demonstrates Git workflow from Day 0 to Day 7.</p> -->
+      </div>
+    </footer>
+  </body>
+</html>
